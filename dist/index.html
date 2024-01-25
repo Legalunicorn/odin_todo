@@ -33,23 +33,36 @@
                     <span class="material-symbols-rounded">more_vert</span>
                 </li>
             </ul>
+            <!--Add project-->
+            <div class="add_item">
+                <span class="material-symbols-rounded">add</span>
+                <span> Add Project</span>
+            </div>
 
         </div>
         <div class="tasks_section">
             <div class="taskHeader">
                 <h1 class="project_name">Home</h1>
-                <div id="add_task">
+                <div class="add_item">
                     <span class="material-symbols-rounded">add</span>
                     <span> Add Task </span>
                 </div>
             </div>
 
-            <div class="tasks_content">
+            <div id="tasks_content">
                 <ul class="tasks"> <!--ul of all tasks of the project-->
                     <li class="task">
                         <!--only display Name, dateline, star, options-->
-                        <input type="checkbox" id="todo">
-                        <label for='todo' class="task_title">Wash the dishes</label>
+                        <input type="checkbox" class="mycheckbox" >
+                        <label class="task_title">Wash the dishes</label>
+                        <span class="task_dateline">12/12/24</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">more_vert</span>
+                    </li>
+                    <li class="task">
+                        <!--only display Name, dateline, star, options-->
+                        <input type="checkbox" class="mycheckbox" >
+                        <label class="task_title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, iusto.</label>
                         <span class="task_dateline">12/12/24</span>
                         <span class="material-symbols-rounded">star</span>
                         <span class="material-symbols-rounded">more_vert</span>
@@ -59,6 +72,10 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p>Project by Nathan Yeo</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
