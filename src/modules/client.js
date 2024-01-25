@@ -2,27 +2,28 @@
 //load all the stuff too
 
 //import from storage to load stuff
+import Storage from './storage'
 
-
-
-const client = ()=>{
-    function loadProjects(){
-        console.log('FATTY BOMBBOMB')
+export default class client{
+    static loadProjects(){ //load into screen
+        console.log('testClassOOPidk')
+    }
+    static clearProjects(){
+        
     }
 
-    function loadTask(projectName){
+    static clearTasks(){
+
+    }
+    static loadTasks(projectName){
         //use storage to 
     }
 
-    function addTask(){
+    static addTask(){
 
     }
 
-    function addButton(){
+    static addButton(){
 
     }
-
-    return {loadProjects}
 }
-
-export default client;

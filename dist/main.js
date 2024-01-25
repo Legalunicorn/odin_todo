@@ -1,1 +1,1 @@
-console.log(" autism");
+(()=>{"use strict";console.log(" hoo"),class{static loadProjects(){console.log("testClassOOPidk")}static clearProjects(){}static clearTasks(){}static loadTasks(s){}static addTask(){}static addButton(){}}.loadProjects()})();
