@@ -1,10 +1,15 @@
 :root{
     font-family: 'Alata',sans-serif;
+    --fontLight: #f5f4f3;
+    --fontDark: #283125;
+    --fontGrey: #374725;
     --bgColor1: #EDF1D6;
     --bgColor2: #9DC08B;
     --bgColor3: #609966;
     --bgColor4: #40513B;
     --footerHeight: 10vh;
+    font-size: 15px;
+    
 
 }
 
@@ -15,6 +20,9 @@
     padding:0;
     box-sizing: border-box;
 
+}
+ul{
+    list-style-type: none;
 }
 
 header{
@@ -28,6 +36,7 @@ header{
     margin-right:15px;
 }
 
+
 .main{
     background-color: var(--bgColor2);
     display:flex;
@@ -35,10 +44,77 @@ header{
 }
 
 .nav{
+    display:flex;
+    flex-direction: column;
     width:300px;
     min-width: 250px;
     background-color: var(--bgColor3);
+    color: var(--fontGrey);
+    padding:2rem;
+
 }
+#projectHeader{
+    border-bottom: 5px solid var(--fontGrey);
+    padding-bottom:10px;
+    font-size: 2.5em;
+    /* padding:5px; */
+    margin-bottom: 5px;
+    
+}
+
+.project{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    display:flex;
+    align-items: center;
+}
+.project.active{
+    background-color: var(--bgColor2);
+}
+.project:hover{
+    background-color: var(--bgColor2);
+    transform: translate(10px) scale(1.05);
+    transition: 150ms ease-in-out;
+}
+
+.project .material-symbols-rounded{
+    color:var(--fontGrey);
+
+    margin-left:auto;
+}
+
+.tasks_section{
+    width:100%;
+    padding: 2rem;
+}
+
+.taskHeader{
+    width:100%;
+    display:flex;
+    /* align-items:center; */
+    justify-content:center;
+}
+.project_name{
+    margin-right:auto;
+}
+#add_task{
+    display:flex;
+    align-items: center;
+    padding: 5px 15px 5px 10px;
+    gap: 5px;
+}
+
+.taskHeader #add_task{
+    background-color: var(--bgColor3);
+    border-radius:2rem;
+    font-size: 1.5rem;
+}
+.taskHeader .material-symbols-rounded{
+    font-variation-settings: 'wght' 600;
+}
+
 
 
 
