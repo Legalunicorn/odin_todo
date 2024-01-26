@@ -4,5 +4,5 @@ console.log(' hoo')
 
 import  Client from "./modules/client"
 
-
-Client.loadProjects();
+Client.loadPage();
+console.log('help me please omg')
