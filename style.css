@@ -1,5 +1,5 @@
-:root{
-    font-family: 'Alata',sans-serif;
+:root {
+    font-family: 'Alata', sans-serif;
     --fontLight: #f5f4f3;
     --fontDark: #283125;
     --fontGrey: #374725;
@@ -7,133 +7,143 @@
     --bgColor2: #9DC08B;
     --bgColor3: #609966;
     --bgColor4: #40513B;
-    --headerHeight:60px;
+    --headerHeight: 60px;
     --footerHeight: 5vh;
     font-size: 15px;
-    
+
 
 }
 
 *,
 *::before,
-*::after{
-    margin:0;
-    padding:0;
+*::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 
 }
-ul{
+
+ul {
     list-style-type: none;
 }
 
-header{
+header {
     height: var(--headerHeight);
     padding: 10px;
-    display:flex;
-    color:#f5f4f3;
+    display: flex;
+    color: #f5f4f3;
     background-color: var(--bgColor4);
 }
-footer{
-    height:var(--footerHeight);
+
+footer {
+    height: var(--footerHeight);
     background-color: var(--bgColor4);
     padding-left: 5vw;
 }
-#logo{
+
+#logo {
     width: 50px;
-    margin-right:15px;
+    margin-right: 15px;
 }
 
 
-.main{
+.main {
     background-color: var(--bgColor2);
-    display:flex;
+    display: flex;
     /* height: 100vh; */
     height: calc(100vh - var(--footerHeight) - var(--headerHeight));
 }
 
-.nav{
-    display:flex;
+.nav {
+    display: flex;
     flex-direction: column;
-    width:300px;
+    width: 300px;
     min-width: 250px;
     background-color: var(--bgColor3);
     color: var(--fontGrey);
-    padding:2rem;
+    padding: 2rem;
 
 }
 
-.projects{
+.projects {
     border-bottom: 5px solid var(--bgColor4);
     padding-bottom: 10px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
-#projectHeader{
+
+#projectHeader {
     border-bottom: 5px solid var(--fontGrey);
-    padding-bottom:10px;
+    padding-bottom: 10px;
     font-size: 2.5em;
     /* padding:5px; */
     margin-bottom: 5px;
     text-align: center;
-    
+
 }
 
-.project{
+.project {
     padding: 0.5rem;
     font-size: 1.5rem;
     margin-top: 10px;
     border-radius: 0.5rem;
-    display:flex;
+    display: flex;
     align-items: center;
 }
-.project.active{
+
+.project.active {
     background-color: var(--bgColor2);
 }
-.project:hover{
+
+.project:hover {
     background-color: var(--bgColor2);
     transform: translate(10px) scale(1.05);
     transition: 150ms ease-in-out;
 }
 
-.project .material-symbols-rounded{
-    color:var(--fontGrey);
+.project .material-symbols-rounded {
+    color: var(--fontGrey);
 
-    margin-left:auto;
+    margin-left: auto;
 }
 
-.tasks_section{
-    max-width:calc(100% - 300px); /*minus the width of nav bar*/
+.tasks_section {
+    width: calc(100% - 300px);
+    /*minus the width of nav bar*/
     padding: 2rem;
 }
 
-.taskHeader{
-    width:100%;
-    display:flex;
+.taskHeader {
+    width: 100%;
+    display: flex;
     /* align-items:center; */
-    justify-content:center;
+    justify-content: center;
 }
-.project_name{
-    margin-right:auto;
+
+.project_name {
+    margin-right: auto;
 }
-.add_item{
-    display:flex;
+
+.add_item {
+    display: flex;
     align-items: center;
     padding: 5px 15px 5px 10px;
     gap: 5px;
     background-color: var(--bgColor3);
-    border-radius:2rem;
+    border-radius: 2rem;
     font-size: 1.5rem;
     border: 5px solid var(--bgColor4)
 }
 
-.add_item:hover{
+.add_item:hover {
     transform: scale(1.05);
 }
-.taskHeader .material-symbols-rounded{
+
+.taskHeader .material-symbols-rounded {
     font-variation-settings: 'wght' 600;
 }
 
 
-#tasks_content{
+#tasks_content {
     background-color: var(--bgColor1);
     margin: 1rem;
     padding: 1rem;
@@ -141,176 +151,186 @@ footer{
     min-height: 50%;
 }
 
-.task{
-    border:1px solid black;
+.task {
+    border: 1px solid black;
     gap: 5px;
-    display:flex;
+    display: flex;
     align-items: center;
-    padding:12px 15px;
+    padding: 12px 15px;
     border-radius: 1rem;
-    max-width:100%;
-    font-size:1.2rem;
+    max-width: 100%;
+    font-size: 1.2rem;
     margin-bottom: 5px;
 }
-.task:hover{
+
+.task:hover {
     background-color: var(--bgColor2);
-    transform: translate(0,-3px);
+    transform: translate(0, -3px);
     transition: 300ms ease-in-out;
 }
+
 /* for the checkbox*/
-.task.task-complete span{
+.task.task-complete span {
     text-decoration: line-through;
-    color: rgb(120,120,120)
+    color: rgb(120, 120, 120)
 }
-.mycheckbox{
-    min-width:1.2rem;
-    min-height:1.2rem;
+
+.mycheckbox {
+    min-width: 1.2rem;
+    min-height: 1.2rem;
     background-color: white;
-    border-radius:0.3rem;
+    border-radius: 0.3rem;
 }
-.task .task_title{
-    margin-right:auto;
-    overflow:hidden;
+
+.task .task_title {
+    margin-right: auto;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.mycheckbox.checked{
+
+.mycheckbox.checked {
     text-decoration: line-through;
     background-color: #609966;
     opacity: 50%;
 }
 
-.favourite.priority{
+.favourite.priority {
     font-variation-settings: 'FILL' 100;
 }
 
 /*MODAL STYLING*/
 
-.modal{
+.modal {
     background-color: #eee;
     border-radius: 2rem;
-    padding:2rem;
-    height:50%;
-    width:80%;
+    padding: 2rem;
+    height: 50%;
+    width: 80%;
     max-width: 1000px;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
     transition: 250ms ease-in-out;
     z-index: 10;
 }
 
-.modal.active{
-    transform: translate(-50%,-50%) scale(1);
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-header{
-    padding-bottom:10px;
-    margin-bottom:10px;
-    border-bottom: 4px solid rgb(0,0,0,50%);
-    display:flex;
+.modal-header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid rgb(0, 0, 0, 50%);
+    display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
     font-weight: bold;
 
 }
 
-.modal-body{
-    font-size:1.2rem;
-    display:flex;
+.modal-body {
+    font-size: 1.2rem;
+    display: flex;
     flex-direction: column;
 }
 
 /**/
-.modal-add-task-bottom{
-    display:flex;
-    justify-content:space-between;
+.modal-add-task-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*MODAL OVERLAY*/
-#overlay{
-    position:fixed;
-    opacity:0;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color: rgb(0,0,0, 50%);
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 50%);
     transition: 250ms ease-in-out;
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
-#overlay.active{
+#overlay.active {
     pointer-events: all;
-    opacity:1;
+    opacity: 1;
 }
 
 /* FORM STYLING */
-input,textarea{
-    font-family: 'alata',sans-serif;
+input,
+textarea {
+    font-family: 'alata', sans-serif;
     font-size: 1.2rem;
-    margin-top:15px;
-    margin-bottom:20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
-input[type=text]{
-    outline:none;
+
+input[type=text] {
+    outline: none;
     padding: 12px 20px;
     border-radius: 1rem;
-    border:0;
+    border: 0;
 }
-input[type=text]:focus,textarea:focus{
+
+input[type=text]:focus,
+textarea:focus {
     border: 3px solid rgb(130, 130, 130);
 }
 
 
-textarea{
-    max-width:100%;
-    min-width:100%;
+textarea {
+    max-width: 100%;
+    min-width: 100%;
     height: 5rem;
     padding: 12px 20px;
     border-radius: 1rem;
-    border:0;
+    border: 0;
     margin-top: 15px;
     margin-bottom: 20px;
-    resize:none;
-    outline:none;
+    resize: none;
+    outline: none;
 }
 
-input[type=date]{
-    width:30%;
-    min-width:170px;
-    border:0;
-    border-radius:1rem;
-    padding:10px;
-    margin-top:10px;
+input[type=date] {
+    width: 30%;
+    min-width: 170px;
+    border: 0;
+    border-radius: 1rem;
+    padding: 10px;
+    margin-top: 10px;
 }
 
-input[type=submit]{
+input[type=submit] {
     padding: 12px 15px;
     border-radius: 1rem;
     border: 3px solid var(--bgColor4);
-    transition:100ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
 
-input[type=submit]:hover{
-    background-color:var(--bgColor3);
+input[type=submit]:hover {
+    background-color: var(--bgColor3);
     border: 2px solid white;
-    color:white;
+    color: white;
 }
 
-@media (max-width: 650px){
-    .main{
-        flex-direction:  column;
+@media (max-width: 650px) {
+    .main {
+        flex-direction: column;
     }
 
-    .nav{
-        width:auto;
+    .nav {
+        width: auto;
         /* display:none; */
     }
-    .tasks_section{
-        max-width: 100%;
+
+    .tasks_section {
+        width: 100%;
     }
-    
+
 }

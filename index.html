@@ -19,31 +19,68 @@
     </header>
 
     <main class="main">
+        <!--left side bar-->
         <div class="nav">
             <h1 id="projectHeader">Projects</h1>
             <ul class="projects">
-                <li class="project active">
+                <!--project items below-->
+                <li data-project-name="Home" class="project active">
                     <span>Home</span>
                     <span class="material-symbols-rounded">more_vert</span>
                 </li>
-                <li class="project">
+
+                <li data-project-name="Work" class="project">
                     <span>Work</span>
                     <span class="material-symbols-rounded">more_vert</span>
                 </li>
             </ul>
             <!--Add project-->
-            <div class="add_item">
+            <div data-modal-target="#add-project-modal" data-submit="add-project" class="add_item">
                 <span class="material-symbols-rounded">add</span>
                 <span> Add Project</span>
-            </div>
 
+                <!--ADD PROJECT MODAL-->
+                <div class="modal" id="add-project-modal">
+                    <div class="modal-header">
+                        <p>New Project</p>
+                        <span data-close-modal class="material-symbols-rounded">close</span>
+                    </div>
+                    <div class="modal-body">
+                        <label for="add-project">Name</label>
+                        <input type="text" id="add-project-name">
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="tasks_section">
             <div class="taskHeader">
                 <h1 class="project_name">Home</h1>
-                <div class="add_item">
+                <!-- Add task button-->
+                <div data-modal-target="#add-task-modal" class="add_item">
                     <span class="material-symbols-rounded">add</span>
-                    <span data-modal-target="#add-task-modal"> Add Task </span>
+                    <span > Add Task </span>
+                </div>
+                <!-- ADD TASK MODAL-->
+                <div class="modal" id="add-task-modal">
+                    <div class="modal-header">
+                        <p>Add Task</p>
+                        <!--Close modal button-->
+                        <span data-close-modal class="material-symbols-rounded">close</span>
+                    </div>
+                    <div class="modal-body">
+                        <label for="add-task-title">Title</label>
+                        <input type="text" id="add-task-title">
+            
+                        <label for="add-task-desc">Description(Optional)</label>
+                        <textarea id="add-task-desc"></textarea>
+                        
+                        <div class="modal-add-task-bottom">
+                            <input type="date" id="add-task-date">
+                            <!-- submit button-->
+                            <input data-submit='add-task' type="submit">
+                        </div>
+                    </div>     
                 </div>
             </div>
 
@@ -51,7 +88,6 @@
                 <ul class="tasks"> <!--ul of all tasks of the project-->
                     <li class="task task-complete">
                         <!--only display Name, dateline, star, options-->
-                        <!-- <input type="checkbox" class="mycheckbox" > -->
                         <div class="mycheckbox checked"></div>
                         <span class="task_title">Wash the dishes</span>
                         <span class="task_dateline">12/12/24</span>
@@ -70,12 +106,15 @@
 
             </div>
         </div>
-        <!--ADD TASK MODAL-->
-        <div id="overlay"></div>
-        <div class="modal " id="add-task-model">
+        <!--OVERLAY -->
+        <div id="overlay"></div> 
+        <!--
+        
+        <div class="modal active" id="add-task-model">
             <div class="modal-header">
                 <p>Add Task</p>
-                <span class="material-symbols-rounded">close</span>
+              
+                <span data-close-button class="material-symbols-rounded">close</span>
             </div>
             <div class="modal-body">
                 <label for="add-task-title">Title</label>
@@ -85,15 +124,13 @@
                 <textarea id="add-task-desc"></textarea>
                 
                 <div class="modal-add-task-bottom">
-                    <input type="date" id="add-task-title">
-                    <input type="submit">
+                    <input type="date" id="add-task-date">
+                   
+                    <input data-submit='add-task' type="submit">
                 </div>
-            </div>
-
-
-            
-            
+            </div>     
         </div>
+        -->
     </main>
     <footer>
         <p>Project by Nathan Yeo</p>
