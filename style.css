@@ -80,7 +80,10 @@ footer {
 
 #projectHeader {
     border-bottom: 5px solid var(--fontGrey);
+    /* border: 5px solid var(--bgColor4); */
+    /* border-radius: 2rem; */
     padding-bottom: 10px;
+    padding-top:10px;
     font-size: 2.5em;
     /* padding:5px; */
     margin-bottom: 5px;
@@ -158,8 +161,15 @@ footer {
     align-self: center;
 }
 .add_project span{
+    font-size: 2rem;
+    font-weight: bolder;
     transform: translate(10%);
 }
+.add_project span:hover{
+    transform: translate(10%) rotate(360deg) scale(1.05);
+    transition: 600ms ease-in-out
+}
+
 
 .add_item:hover {
     transform: scale(1.05);
@@ -180,7 +190,6 @@ footer {
     max-height: calc(75vh - var(--footerHeight) - var(--headerHeight));
     overflow-y:auto;
     filter: drop-shadow(-5px 5px 0.25rem var(--bgColor3));
-    /* overflow:hidden; */
 }
 
 
