@@ -14,6 +14,7 @@ export default class Todo {
     addProject(name){
         //if found dont do it!
         if (this.projects.find((project)=>project.getName()==name)){
+            alert('Project with this name already exists!')
             return //dont add it if it exists
         }
         this.projects.push(new Project(name));

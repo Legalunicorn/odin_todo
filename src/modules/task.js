@@ -2,12 +2,17 @@
 // ie edit tasks etc
 
 export default class Task{
-    constructor(title,desc,date){
+    constructor(title,desc,date,parentName){
         this.title = title;
         this.desc = desc;
         this.date = date;
         this.isStar = false;
+        this.isCheck = false;
+        this.parentName = parentName
         this.id = 0
+    }
+    getParent(){
+        return this.parentName
     }
 
     //setters and getters
@@ -53,7 +58,29 @@ export default class Task{
         if (this.isStar){
             return 'priority'
         }
+        else{
+            return ''
+        }
     }
+
+    toggleCheck(){
+        if (this.isCheck){
+            this.isCheck=false;
+        }
+        else{
+            this.isCheck=true;
+        }
+    }
+    isChecked(){
+        if (this.isCheck){
+            return 'checked'
+        }
+        else{
+            return ''
+        }
+    }
+
+    
 
 
 

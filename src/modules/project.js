@@ -22,7 +22,7 @@ export default class Project{
     }
 
     addTask(title,desc,date){
-        const newTask = new Task(title,desc,date);
+        const newTask = new Task(title,desc,date,this.projectName);
         newTask.setID(this.count);
         this.addCount();
         //consider addin task ID to a html-data element
@@ -33,7 +33,7 @@ export default class Project{
         //id will be uniqute
         //use task module
         if (this.tasks.find((task)=>task.id==taskID)){
-            this.tasks = this.tasks.filter(task=>task.id==taskID)
+            this.tasks = this.tasks.filter(task=>task.id!=taskID)
         }
     }
 
@@ -41,9 +41,7 @@ export default class Project{
         return this.tasks;
     }
     getTask(taskID){
-        if (this.tasks.find((task)=>task.getID()==taskID)){
-            return task;
-        }
+        return this.tasks.find((task)=>task.getID()==taskID)
     }
 
     setTasks(tasks){

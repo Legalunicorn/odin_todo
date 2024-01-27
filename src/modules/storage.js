@@ -41,4 +41,8 @@ export default class Storage{
         localStorage.removeItem('active')
     }
 
+    // static deleteTask(){
+    //     //
+    // }
+
 }
