@@ -102,8 +102,13 @@ footer {
 
 .project .material-symbols-rounded {
     color: var(--fontGrey);
-
-    margin-left: auto;
+    background-color: aqua;
+    /* margin-left: auto; */
+}
+.project span:first-child{
+    background-color: red;
+    margin-right: auto;
+    width:100%;
 }
 
 .tasks_section {
@@ -241,6 +246,10 @@ footer {
 .modal-add-task-bottom {
     display: flex;
     justify-content: space-between;
+}
+.submit-new-project{
+    width: 100px;
+    max-width:20%;
 }
 
 /*MODAL OVERLAY*/

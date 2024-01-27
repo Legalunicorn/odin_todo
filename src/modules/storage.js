@@ -4,7 +4,6 @@ import Project from "./project"
 import Task from "./task"
 
 export default class Storage{
-
     static getToDo(){
         const todo = Object.assign(new Todo(),JSON.parse(localStorage.getItem('todo')));
         //set the projects and task
@@ -15,7 +14,6 @@ export default class Storage{
             todo.getProjects()
                 .map((project)=>Object.assign(new Project,project))
         )
-        console.log('h3ll',todo.getProjects())
         todo.getProjects()
             .forEach((project)=>{
                 project.setTasks(
@@ -31,6 +29,16 @@ export default class Storage{
 
     static saveTodo(data){
         localStorage.setItem('todo',JSON.stringify(data));
+    }
+
+    static saveActive(projectName){
+        localStorage.setItem('active',JSON.stringify(projectName))
+    }
+    static getActive(){
+        return JSON.parse(localStorage.getItem('active')) || null
+    }
+    static resetActive(){
+        localStorage.removeItem('active')
     }
 
 }

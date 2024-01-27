@@ -4,10 +4,11 @@
 //other modules like project will manipulate this todo object
 
 import Project from "./project"
+
 export default class Todo {
     constructor(){
         this.projects =[]
-        this.addProject('All');
+        
     }
     
     addProject(name){
@@ -18,20 +19,19 @@ export default class Todo {
         this.projects.push(new Project(name));
     }
     deleteProject(name){
-        if (this.projects.find((project)=>project.getName()===name)){
-            this.projects = this.projects.filter(project=>project.getName()==name)
+        console.log('todo-delteproject, name,',name)
+        if (this.projects.find((project)=>project.getName()==name)){
+            this.projects = this.projects.filter((project)=>project.getName()!=name)
         }
         return;
     }
 
     getProjects(){
-        console.log("u",this.projects)
         return this.projects;
     }
 
     getProject(projectName){
-        console.log('OIII',projectName)
-        return this.projects.find((project)=>project.getName()==projectName) || console.log('failuretogetpro')
+        return this.projects.find((project)=>project.getName()==projectName) || [];
     }
 
     setProjects(projects){

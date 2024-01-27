@@ -24,6 +24,7 @@
             <h1 id="projectHeader">Projects</h1>
             <ul class="projects">
                 <!--project items below-->
+                <!--
                 <li data-project-name="Home" class="project active">
                     <span>Home</span>
                     <span class="material-symbols-rounded">more_vert</span>
@@ -33,22 +34,23 @@
                     <span>Work</span>
                     <span class="material-symbols-rounded">more_vert</span>
                 </li>
+                -->
             </ul>
             <!--Add project-->
-            <div data-modal-target="#add-project-modal" data-submit="add-project" class="add_item">
+            <div data-modal-target="#add-project-modal" class="add_item">
                 <span class="material-symbols-rounded">add</span>
                 <span> Add Project</span>
-
+            </div>
                 <!--ADD PROJECT MODAL-->
-                <div class="modal" id="add-project-modal">
-                    <div class="modal-header">
-                        <p>New Project</p>
-                        <span data-close-modal class="material-symbols-rounded">close</span>
-                    </div>
-                    <div class="modal-body">
-                        <label for="add-project">Name</label>
-                        <input type="text" id="add-project-name">
-                    </div>
+            <div class="modal" id="add-project-modal">
+                <div class="modal-header">
+                    <p>New Project</p>
+                    <span data-close-modal class="material-symbols-rounded">close</span>
+                </div>
+                <div class="modal-body">
+                    <label for="add-project">Name</label>
+                    <input type="text" id="add-project">
+                    <input data-submit="add-project" class="submit-new-project" type="submit">
                 </div>
             </div>
         </div>
