@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <img id="logo" src="assets/todo_logo.svg" alt="svg_logo">
+        <img class="logo" src="assets/todo_logo.svg" alt="svg_logo">
         <h1>To Do List</h1>
         <!-- <span class="material-symbols-outlined">menu</span> -->
     </header>
@@ -23,23 +23,12 @@
         <div class="nav">
             <h1 id="projectHeader">Projects</h1>
             <ul class="projects">
-                <!--project items below-->
-                <!--
-                <li data-project-name="Home" class="project active">
-                    <span>Home</span>
-                    <span class="material-symbols-rounded">more_vert</span>
-                </li>
 
-                <li data-project-name="Work" class="project">
-                    <span>Work</span>
-                    <span class="material-symbols-rounded">more_vert</span>
-                </li>
-                -->
             </ul>
             <!--Add project-->
-            <div data-modal-target="#add-project-modal" class="add_item">
+            <div data-modal-target="#add-project-modal" class="add_item add_project">
                 <span class="material-symbols-rounded">add</span>
-                <span> Add Project</span>
+                <!-- <span> Add Project</span> -->
             </div>
                 <!--ADD PROJECT MODAL-->
             <div class="modal" id="add-project-modal">
@@ -88,54 +77,31 @@
 
             <div id="tasks_content">
                 <ul class="tasks"> <!--ul of all tasks of the project-->
-                    <li class="task task-complete">
-                        <!--only display Name, dateline, star, options-->
-                        <div class="mycheckbox checked"></div>
-                        <span class="task_title">Wash the dishes</span>
-                        <span class="task_dateline">12/12/24</span>
-                        <div class="material-symbols-rounded favourite">star</div>
-                        <div class="material-symbols-rounded">more_vert</div>
-                    </li>
-                    <li class="task">
-                        <!--only display Name, dateline, star, options-->
-                        <div class="mycheckbox "></div>
-                        <span class="task_title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, iusto.</span>
-                        <span class="task_dateline">12/12/24</span>
-                        <div class="material-symbols-rounded favourite priority">star</div>
-                        <div class="material-symbols-rounded">more_vert</div>
-                    </li>
                 </ul>
-
+                <!-- VIEW TASK MODAL-->
+                <div class="modal" id="view-task-modal">
+                    <div class="modal-header">
+                        <p>View Task</p>
+                        <span data-close-modal class="material-symbols-rounded">close</span>
+                    </div>
+                    <div class="modal-body">
+                        <p>Task Title: </p>
+                        <p class="view-title"></p>
+                        <p>Task Description</p>
+                        <p class="view-description"></p>
+                        <p>Task Date: </p>
+                        <p class="view-date"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <!--OVERLAY -->
         <div id="overlay"></div> 
-        <!--
-        
-        <div class="modal active" id="add-task-model">
-            <div class="modal-header">
-                <p>Add Task</p>
-              
-                <span data-close-button class="material-symbols-rounded">close</span>
-            </div>
-            <div class="modal-body">
-                <label for="add-task-title">Title</label>
-                <input type="text" id="add-task-title">
-    
-                <label for="add-task-desc">Description(Optional)</label>
-                <textarea id="add-task-desc"></textarea>
-                
-                <div class="modal-add-task-bottom">
-                    <input type="date" id="add-task-date">
-                   
-                    <input data-submit='add-task' type="submit">
-                </div>
-            </div>     
-        </div>
-        -->
+
     </main>
     <footer>
-        <p>Project by Nathan Yeo</p>
+        <p>LegalUnicorn</p>
+        <img class="git_logo" src="assets/github.svg" alt="github_svg">
     </footer>
 
 
