@@ -10,11 +10,12 @@ An assigment from [the odin project](https://www.theodinproject.com/lessons/node
 3. "Star" favourite/important tasks
 5. Save your project and tasks in your browser using localStorage
 
-
-Made with: Javascript, CSS, HTML
-
 ## Live at
 [here](https://legalunicorn.github.io/odin_todo/)
+
+
+- Made with: Javascript, CSS, HTML
+
 
 ## Note to Self
 - modals not usable if used on potrait on mobile devices

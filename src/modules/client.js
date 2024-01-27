@@ -1,9 +1,7 @@
-
 import Storage from './storage'
 
 export default class client{
     //part1 - load/reload page contents
-    //set All to active
     static loadPage(){
         client.clearProjects();
         client.clearTasks();
@@ -15,12 +13,10 @@ export default class client{
         Storage.getToDo()
             .getProjects()
             .forEach((project)=>{
-                client.createProject(project) //this is a oop instance idk if it will work lol
+                client.createProject(project)
             })
 
-        //there IS an active project + make sure incase there are projects existing
         if (Storage.getActive()!=null && Storage.getToDo().getProjects().length!=0){
-            //you are trying to set active to a deleted 
             client.setActive(Storage.getActive())
         }
         client.initProjectNav();
@@ -190,7 +186,7 @@ export default class client{
 
             //refresh data into view
             client.clearTasks(); //all the task button eventlistener is gone BUT add task remauns
-            client.loadTasks(activeProjectName); //REMOVES ACTIV TASK
+            client.loadTasks(activeProjectName);
         })
         //submit new project
         const submitProjectButton = document.querySelector('[data-submit="add-project"]');
@@ -287,7 +283,6 @@ export default class client{
                 //after you deleted, there exists only one proj
                 if ((isActive && todo.getProjects().length>0) || (todo.getProjects().length==1)){
                     client.setFirstToActive();
-
                 }
                 if (todo.getProjects().length==0){
                     Storage.resetActive();
@@ -322,7 +317,6 @@ export default class client{
                 client.loadTasks(parentName);
             })
         })
-
     }
     static initStarTask(){
         //to go inside load task
@@ -361,12 +355,4 @@ export default class client{
             })
         })
     }
-    // static initViewTask(){
-    //     const taskTitle = document.querySelectorAll('.task_title')
-    //     taskTitle.forEach((button)=>{
-
-    //     })
-    // }
-
-
 }
