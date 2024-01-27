@@ -1,11 +1,5 @@
-//this is for the buttons to do stuff when pressed
-//load all the stuff too
-// interactivity and DOM changes goes here
-//import from storage to load stuff
+
 import Storage from './storage'
-// import Todo from './todo'
-// import Project from './project'
-// import Task from './task'
 
 export default class client{
     //part1 - load/reload page contents
@@ -31,9 +25,7 @@ export default class client{
         }
         client.initProjectNav();
         client.initDeleteProject();
-        // client.initModalButtons();
-
-        
+  
     }
     static setActive(projectName){
         const project = document.querySelector(`[data-project-name="${projectName}"]`);
@@ -78,8 +70,7 @@ export default class client{
         <div data-favourite="${task.getParent()}" class="material-symbols-rounded favourite ${task.isStarred()}">star</div>
         <div  data-task-parent="${task.getParent()}" class="material-symbols-rounded">close</div>
         </li>
-        `
-        
+        `  
     }
     static loadActiveProject(){
         //projects are loaded, get the name of which is active
@@ -133,7 +124,6 @@ export default class client{
         </div>
         `
     }
-    
     static initOpenModalButtons(){
         //for addTask make sure theres an active Project
         const openModalButtons = document.querySelectorAll('[data-modal-target]')
@@ -155,22 +145,6 @@ export default class client{
 
                     const modalbody = modal.querySelector('.modal-body')
                     modalbody.innerHTML=client.viewModalHTML(task);
-                    // `
-                    // <div class="view-group">
-                    // <p>Task Title: </p>
-                    // <p>${task.getTitle()}</p>
-                    // </div>
-
-                    // <div class="view-group">
-                    // <p>Task Description:</p>
-                    // <p>${task.getDesc()}</p>
-                    // </div>
-
-                    // <div class="view-group">
-                    // <p>Task Date:</p>
-                    // <p>${task.getDate()}</p>
-                    // </div>
-                    // `
                 }
                 client.openModal(modal)
             })
@@ -320,6 +294,9 @@ export default class client{
                 }
                 client.clearProjects();
                 client.loadProjects();
+                //reset tasks in case
+                client.clearTasks();
+                client.loadActiveProject();
                 client.initProjectNav();
                 client.initDeleteProject();
 
