@@ -4,7 +4,7 @@
 
 An assigment from [the odin project](https://www.theodinproject.com/lessons/node-path-javascript-todo-list)
 
-### Features
+## Features
 1. Create and delete projects
 2. Create and delete tasks within projects 
 3. "Star" favourite/important tasks
@@ -13,10 +13,10 @@ An assigment from [the odin project](https://www.theodinproject.com/lessons/node
 
 Made with: Javascript, CSS, HTML
 
-### Live at
-(here)
+## Live at
+[here](https://legalunicorn.github.io/odin_todo/)
 
-### Note to Self
+## Note to Self
 - modals not usable if used on potrait on mobile devices
 - code and function usage can be alot more consize, should plan the individual modules first 
 - should consider using function factories instead of OOP, especially when dealing with localStorage API
