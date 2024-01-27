@@ -1,8 +1,10 @@
 # ToDoList Web Project
-
-![Desktop Screenshor](/dist/assets/todo_desktop.png)
+### Desktop preview
+![Desktop Screenshot](/dist/assets/todo_desktop.png)
 
 An assigment from [the odin project](https://www.theodinproject.com/lessons/node-path-javascript-todo-list)
+
+* Made with: Javascript, CSS, HTML
 
 ## Features
 1. Create and delete projects
@@ -14,7 +16,9 @@ An assigment from [the odin project](https://www.theodinproject.com/lessons/node
 [here](https://legalunicorn.github.io/odin_todo/)
 
 
-- Made with: Javascript, CSS, HTML
+
+### Mobile Preview
+![Mobile ScreenShot](/dist/assets/todo_mobile.png)
 
 
 ## Note to Self
