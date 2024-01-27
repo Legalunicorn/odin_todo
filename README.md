@@ -19,5 +19,5 @@ Made with: Javascript, CSS, HTML
 ## Note to Self
 - modals not usable if used on potrait on mobile devices
 - code and function usage can be alot more consize, should plan the individual modules first 
-- should consider using function factories instead of OOP, especially when dealing with localStorage API
+- should consider using function factories instead of OOP, especially when dealing with localStorage
 
